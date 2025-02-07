@@ -1,0 +1,12 @@
+scraping/harddiskdirect/downloaded_images
+scraping/m4l/processors/images
+scraping/m4l/memory/images
+scraping/m4l/hard_drive/images
+scraping/m4l/processors/sku_images
+scraping/m4l/processors/scraped from m4l/images
+scraping/backup
+scraping/build
+scraping/m4l/processors/images
+
+*.jepg
+*.jpg 
