@@ -6,6 +6,7 @@ import time
 import requests
 from bs4 import BeautifulSoup
 import os
+# pyinstaller --onefile --windowed --name "EbayScraper" ebay_scraper.py
 
 def append_to_csv(data, filename="ebay/ebay_scraped.csv"):
     os.makedirs(os.path.dirname(filename), exist_ok=True)
@@ -98,7 +99,7 @@ class EbayScraperApp:
                         total_count += 1
                     except Exception as e:
                         self.log(f"An error occurred with SKU {sku}: {e}")
-                        time.sleep(5)
+                        time.sleep(30)
             elapsed = time.time() - start_time
             self.log(f"Finished scraping {total_count} items in {elapsed:.2f} seconds.")
         except Exception as e:

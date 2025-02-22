@@ -1,0 +1,13 @@
+Brands : ['Cisco', '', 'Crucial', 'Dell', 'HP', 'HPE', 'Hynix', 'IBM', 'Kingston', 'Micron', 'Oracle', 'Samsung', 'Sun', 'Lenovo', 'SanDisk', 'InnoDisk', 'Intel', 'Sony', '3D Memory', 'PNY', 'SuperMicro', 'Axiom', 'Edge Memory', 'Dataram', 'Lexar Media', 'Smart Modular']
+Memory Type : ['DDR4 SDRAM', 'DDR4 LRDIMM', '', 'DDR3 SDRAM', 'DDR3 LRDIMM', 'SODIMM', 'DDR SDRAM', 'DDR2 SDRAM', 'NV-DDR4 SDRAM', 'Mini-DDR4 SDRAM', 'Fully Buffered Dimm', 'microSDXC', 'Compact Flash', 'SDXC', 'microSDHC', 'PC4-25600', 'MiniDIMM']
+Capacity : ['8GB', '32GB', '16GB', '128GB', '64GB', '', '32GB(2 X 16GB)', '4GB', '2GB', '8GB(2 X 4GB)', '48GB(3 X 16GB)', '16GB(2 X 8GB)', '1GB', '256MB', '128GB(8 X 16GB)', '512MB', '64GB(4 X 16GB)', '64GB(2 X 32GB)', '256GB(8 X 32GB)', '256GB', '1GB (2 X 512)', '128GB(2 X 64GB)', '256 MB', '512GB', '24GB', '128GB(4 X 32GB)', '32GB(4 X 8GB)', '256GB(4 X 64GB)', '16GB(8 X 2GB)', '4GB(2 X 2GB)', '64GB (4 X 16GB)', '32GB(8 X 4GB)', '8GB(4 X 2GB)', '512GB(16 X 32GB)']
+Data Transfer Rate : ['2133Mhz', '2400Mhz', '2666MHz', '3200MHz', '', '1066Mhz', '1333Mhz', '1600Mhz', '2933MHz', '1866Mhz', '333Mhz', '266Mhz', '667Mhz', '400Mhz', '800Mhz', '533Mhz', '3000MHz', '3600MHz', '3466MHz']
+Pins : ['288 Pin', '', '240 Pin', '200 Pin', '184 Pin', '204 Pin', '260 Pin', '276 Pin', '288', '278 Pin', '244 Pin']
+Bus Type : ['PC-17000', 'PC-19200', 'PC-21300', 'PC-25600', '', 'PC-8500', 'PC-10600', 'PC-12800', 'PC-23400', 'PC-14900', 'PC-2700', 'PC-2100', 'PC-5300', 'PC-3200', 'PC-6400', 'PC-4200', 'PC-24000', 'PC-28800', 'PC-27700']
+Error Correction : ['Registered ECC', 'Load Reduced ECC', '', 'ECC', 'Non-ECC', 'Registered', 'Fully Buffered ECC', 'non-ECC Unbuffered']
+Cycle Time : ['0.93ns', '0.83ns', '0.75ns', '0.62ns', '', '1.87ns', '1.5ns', '1.25ns', '0.682ns', '1.07ns', '6ns', '7.5ns', '10ns', '5ns', '0.83n', 
+'3.75ns']
+Cas : ['CL15', 'CL17', 'CL19', 'CL22', '', 'CL7', 'CL9', 'CL11', 'CL21', 'CL13', 'CL2.5', 'CL5', 'CL3', 'CL6', 'CL4', 'CL16', 'CL14', 'CL10']       
+Rank : ['Rank 1', 'Rank 4', 'Rank 2', 'Rank 8', '', 'Rank 3']
+Voltage : ['1.2', '', '1.35', '1.5', '2.5', '1.8', '1.55', '3.3', '1.35 V']
+Total Products : 13660

@@ -145,7 +145,7 @@ class ScraperTab:
                             image_url = [""]*12
                             for image in images:
                                 if image.get("data-idx"):
-                                    if int(image.get("data-idx")) >= 0:
+                                    if int(image.get("data-idx")) >= 0 and int(image.get("data-idx")) < 12:
                                         image_url[int(image.get("data-idx"))]=image.get("data-src")
                             out_row = (sku, title, stock,listing_ended_flag ,price,versions,shipping,description ,url, image_url[0], image_url[1], image_url[2], image_url[3], image_url[4], image_url[5], image_url[6], image_url[7], image_url[8], image_url[9], image_url[10], image_url[11])
                         with open(self.output_file, "a", newline='', encoding='utf-8') as outfile:

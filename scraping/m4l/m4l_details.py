@@ -12,8 +12,8 @@ from selenium.webdriver.support import expected_conditions as EC
 
 
 # Configuration
-LOG_FILE = "m4l/hard_drive/links_progress.csv"
-JSON_FILE = "m4l/hard_drive/products.json"
+LOG_FILE = "m4l/hard_drive/links_progress2.csv"
+JSON_FILE = "m4l/hard_drive/products2.json"
 MAX_RETRIES = 3
 folder = "m4l/hard_drive/images"  # Folder to save images
 output_format = "JPEG"  # Choose "JPEG" or "PNG"

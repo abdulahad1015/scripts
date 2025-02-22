@@ -12,24 +12,24 @@ from selenium.webdriver.support import expected_conditions as EC
 
 
 # Configuration
-LOG_FILE = "m4l/hard_drive/links_progress.csv"
-JSON_FILE = "m4l/hard_drive/products.json"
+LOG_FILE = "m4l/memory/links_progress2.csv"
+JSON_FILE = "m4l/memory/products2.json"
 MAX_RETRIES = 3
-folder = "m4l/hard_drive/images"  # Folder to save images
+folder = "m4l/memory/images"  # Folder to save images
 output_format = "JPEG"  # Choose "JPEG" or "PNG"
 
 
-memory_data = [
-    ("Memory By Brand", "Cisco Memory", "https://m4l.com/cisco-memory-upgrades"),
-    ("Memory By Brand", "Crucial Memory", "https://m4l.com/crucial-memory-upgrades"),
-    ("Memory By Brand", "Dell Memory", "https://m4l.com/dell-memory-upgrades"),
-    ("Memory By Brand", "HP Memory", "https://m4l.com/hp-memory-upgrades"),
-    ("Memory By Brand", "Hynix Memory", "https://m4l.com/hynix-memory-upgrades"),
-    ("Memory By Brand", "IBM Memory", "https://m4l.com/ibm-memory-upgrades"),
-    ("Memory By Brand", "Kingston Memory", "https://m4l.com/kingston-memory-upgrades"),
-    ("Memory By Brand", "Micron Memory", "https://m4l.com/micron-memory-upgrades"),
-    ("Memory By Brand", "Oracle Memory", "https://m4l.com/oracle-memory-upgrades"),
-    ("Memory By Brand", "Samsung Memory", "https://m4l.com/samsung-memory-upgrades"),
+CPU_LINKS= [
+    # ("Memory By Brand", "Cisco Memory", "https://m4l.com/cisco-memory-upgrades"),
+    # ("Memory By Brand", "Crucial Memory", "https://m4l.com/crucial-memory-upgrades"),
+    # ("Memory By Brand", "Dell Memory", "https://m4l.com/dell-memory-upgrades"),
+    # ("Memory By Brand", "HP Memory", "https://m4l.com/hp-memory-upgrades"),
+    # ("Memory By Brand", "Hynix Memory", "https://m4l.com/hynix-memory-upgrades"),
+    # ("Memory By Brand", "IBM Memory", "https://m4l.com/ibm-memory-upgrades"),
+    # ("Memory By Brand", "Kingston Memory", "https://m4l.com/kingston-memory-upgrades"),
+    # ("Memory By Brand", "Micron Memory", "https://m4l.com/micron-memory-upgrades"),
+    # ("Memory By Brand", "Oracle Memory", "https://m4l.com/oracle-memory-upgrades"),
+    # ("Memory By Brand", "Samsung Memory", "https://m4l.com/samsung-memory-upgrades"),
     ("Memory By Brand", "Sun Memory", "https://m4l.com/sun-memory-upgrades"),
 
     ("Memory By Capacity", "256GB Memory", "https://m4l.com/256gb-memory-upgrades"),
