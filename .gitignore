@@ -1,3 +1,7 @@
+*.jepg
+*.jpg 
+
+
 scraping/harddiskdirect/downloaded_images
 scraping/m4l/processors/images
 scraping/m4l/memory/images
@@ -9,5 +13,3 @@ scraping/build
 scraping/m4l/processors/images
 scraping/__pycache__
 
-*.jepg
-*.jpg 
