@@ -159,7 +159,7 @@ class ScraperTab:
                     self.log(f"Processing SKU: {sku} | URL: {url}")
 
                     try:
-                        response = requests.get(url, timeout=10)
+                        response = requests.get(url, timeout=10 , allow_redirects=False)
                         response.raise_for_status()
                         soup = BeautifulSoup(response.content, "html.parser")
                         scraped = {}
@@ -219,6 +219,7 @@ class ScraperTab:
                             scraped["Listing Ended"] = any("This listing was ended" in text for text in soup.stripped_strings) if selected.get("Listing Ended", False) else "NA"
                         else:
                             scraped["Listing Ended"] = "NA"
+                            
                         # Handle images (always store 12 image slots)
                         if selected["Images"].get():
                             images = [img.get("data-src", "") for img in soup.find_all("img") if img.get("data-src")]
@@ -248,6 +249,10 @@ class ScraperTab:
                         total_count += 1
                     except requests.exceptions.RequestException as e:
                         self.log(f"Network error for SKU {sku}: {e}")
+                        row_data = [sku, url] + ["Error: Network issue"] * (len(header) - 2)  # Fill remaining columns
+                        with open(self.output_file, "a", newline='', encoding='utf-8') as outfile:
+                            writer = csv.writer(outfile, delimiter=',', quotechar='"', quoting=csv.QUOTE_ALL)
+                            writer.writerow(row_data)
                         continue
         except Exception as e:
             self.log(f"Failed to process file: {e}")
@@ -255,6 +260,7 @@ class ScraperTab:
         elapsed = time.time() - start_time
         self.log(f"Scraping complete. Total items scraped: {total_count}")
         self.log(f"Time taken: {elapsed:.2f} seconds")
+
 
         # Re-enable UI elements after scraping
         self.select_btn.config(state=tk.NORMAL)
