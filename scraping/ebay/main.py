@@ -121,7 +121,7 @@ class ScraperTab:
 
     def run_scraper(self):
         # Define a constant header with all possible fields
-        header = ["SKU", "URL", "Title", "Stock", "Price", "Description", "Shipping", "Versions", "Listing Ended"]
+        header = ["SKU", "URL", "Title", "Stock", "Price","Auction","Description","Condition","Shipping", "Versions","Listing Ended"]
         image_columns = [f"Image_{i}" for i in range(1, 13)]
         header.extend(image_columns)  # Always include image columns
 
@@ -216,10 +216,30 @@ class ScraperTab:
                             scraped["Versions"] = "NA"
                         
                         if selected["Listing Ended"].get():
-                            scraped["Listing Ended"] = any("This listing was ended" in text for text in soup.stripped_strings) if selected.get("Listing Ended", False) else "NA"
-                        else:
-                            scraped["Listing Ended"] = "NA"
-                            
+                            scraped["Listing Ended"] = any("This listing was ended" in text for text in soup.stripped_strings) if selected.get("Listing Ended", False) else "NA"                        
+                        if scraped["Listing Ended"] == False:
+                            sold_div = soup.find("div", class_="x-photos-min-view filmstrip filmstrip-x")
+                            if sold_div:
+                                cvip_div = sold_div.find("div", class_="x-photos-cvip")
+                                if cvip_div:
+                                    span = cvip_div.find("span", class_="ux-textspans")
+                                    if span:
+                                        sold_text = span.get_text(strip=True)
+                                        if sold_text == "SOLD":
+                                            scraped["Listing Ended"] = "True"
+                                        else:
+                                            scraped["Listing Ended"] = "NA"
+                                    else:
+                                        scraped["Listing Ended"] = "NA"
+                                else:
+                                    scraped["Listing Ended"] = "NA"
+                            else:
+                                scraped["Listing Ended"] = "NA"
+
+                        scraped["Condition"] = soup.find("div", class_="x-item-condition-text") if soup.find("div", class_="x-item-condition-text") else "NA"
+                        scraped["Condition"] = scraped["Condition"].find("span",class_="ux-textspans").get_text() if scraped["Condition"].find("span",class_="ux-textspans") else "NA"
+
+                        scraped["Auction"] = True if soup.find("div", class_="vim x-bid-price") else False
                         # Handle images (always store 12 image slots)
                         if selected["Images"].get():
                             images = [img.get("data-src", "") for img in soup.find_all("img") if img.get("data-src")]
