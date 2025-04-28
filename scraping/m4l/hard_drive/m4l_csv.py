@@ -8,22 +8,20 @@ csv_columns = [
     'storage', 'condition', 'categories', 'price', 'qty', 'is_in_stock',
     'description', 'short_description', 'weight', 'visibility', 'tax_class_name',
     'meta_title', 'meta_description', 'meta_keyword', 'image', 'small_image',
-    'thumbnail', 'brand', 'hard_drive_type', 'hard_drive_capacity','hard_drive_bandwidth','hard_drive_pins','hard_drive_bus','hard_drive_error_correction','hard_drive_cycle_time','hard_drive_cas','hard_drive_rank','hard_drive_voltage' ,'errors'
+    'thumbnail', 'brand', 'hard_drive_interface','hard_drive_capacity' ,'hard_drive_speed','hard_drive_form_factor','hard_drive_cache','errors'
 ]
 
 brands = []
-hard_drive_type = []
-Capacity = []
-Data_Transfer_Rate = []
-Pins = []
-Bus_Type = []
-Error_Correction = []
-Cycle_Time = []
-Cas = []
-Rank = []
-Voltage = []
+
+
+
 mpns={}
 processed_rows = []
+hard_drive_interface = []
+hard_drive_speed = []
+hard_drive_form_factor = []
+hard_drive_cache = []
+Capacity = {}
 
 
 def process_json_to_csv(input_file, output_file):
@@ -57,14 +55,14 @@ def process_json_to_csv(input_file, output_file):
         image_path = f"/hard_drive/images/{part_no}.jpeg"  # New image path pattern
         parsed_url = urlparse(item.get('product_url', ''))
         full_image_url = f"{parsed_url.scheme}://{parsed_url.netloc}{image_path}" if parsed_url.netloc else ''
-
-        old_file = os.path.join(r"C:\Users\Osaka Motors\Desktop\scripts\scraping\m4l\hard_drive\images", f"{part_no}.jpeg")
-        new_file = os.path.join(r"C:\Users\Osaka Motors\Desktop\scripts\scraping\m4l\hard_drive\sku_images", f"{sku}.jpeg")
-
-        # try:
-        #     os.rename(old_file,new_file)
-        # except:
-        #     pass
+        old_file = os.path.join("C:\\Users\\Osaka Motors\\Desktop\\scripts\\scraping\\m4l\\hard_drive\\images", f"{part_no}.jpeg")
+        new_file = os.path.join("C:\\Users\\Osaka Motors\\Desktop\\scripts\\scraping\\m4l\\hard_drive\\sku_images", f"{sku}.jpeg")
+        try:
+            os.rename(old_file,new_file)
+        except:
+            pass
+        
+        # os.rename(old_file,new_file)
 
         # Create row with new fields
         category='/'.join(filter(None, [
@@ -97,11 +95,37 @@ def process_json_to_csv(input_file, output_file):
             'small_image': f"{sku}.jpeg",
             'thumbnail': f"{sku}.jpeg",
             'brand': specs.get('Manufacturer', '') if specs.get('Manufacturer', '') else '',
+            'hard_drive_interface': specs.get('Drive Interface Type', '') if specs.get('Drive Interface Type', '') else '',
+            'hard_drive_speed': specs.get('Spindle Speed', '') if specs.get('Spindle Speed', '') else '',
+            'hard_drive_form_factor': specs.get('Form Factor', '') if specs.get('Form Factor', '') else '',
+            'hard_drive_cache': specs.get('Cache', '') if specs.get('Cache', '') else '',
+            'hard_drive_capacity': specs.get('Capacity', '') if specs.get('Capacity', '') else '',
+
             'errors': ''
         }
-
-
-
+        capacity = row['hard_drive_capacity']
+        if capacity:
+            value = int(float(capacity.split()[0]))
+            unit = capacity.split()[-1]
+            if (unit == "MB") or (unit=="GB" and value <= 9):
+                row['hard_drive_capacity']="500MB - 10GB"
+            elif (unit == "GB" and value <= 20):
+                row['hard_drive_capacity']="10GB - 20GB"
+            elif (unit == "GB" and value <= 40):
+                row['hard_drive_capacity']="20GB - 40GB"
+            elif (unit == "GB" and value <= 80):
+                row['hard_drive_capacity']="40GB - 80GB"
+            elif (unit == "GB" and value <= 160):
+                row['hard_drive_capacity']="80GB - 160GB"
+            elif (unit == "GB" and value <= 320):
+                row['hard_drive_capacity']="160GB - 320GB"
+            elif (unit == "GB" and value <= 500):
+                row['hard_drive_capacity']="320GB - 500GB"
+            elif (unit == "GB" and value < 1000):
+                row['hard_drive_capacity']="500GB - 1TB"
+            else:
+                row['hard_drive_capacity']=f"{value} {unit}"
+            
 
                 
         
@@ -117,34 +141,29 @@ def process_json_to_csv(input_file, output_file):
         short_description = f"<ul> <li><strong>Part No. :</strong> {row['mpn']}</li>   <li><strong>Product Type:</strong> hard_drive</li>  "
         if row['brand'] != "NA":
             short_description += f"<li><strong>Brand :</strong> {row['brand']}</li> "
-        
-        
         row['short_description'] = f"{short_description}"
 
         
 
         if row['brand'] not in brands:
             brands.append(row['brand'])
-        if specs.get('hard_drive Type', '') not in hard_drive_type:
-            hard_drive_type.append(specs.get('hard_drive Type', ''))
-        if specs.get('Capacity', '') not in Capacity:
-            Capacity.append(specs.get('Capacity', ''))
-        if specs.get('Data Transfer Rate', '') not in Data_Transfer_Rate:
-            Data_Transfer_Rate.append(specs.get('Data Transfer Rate', ''))
-        if specs.get('Pins', '') not in Pins:
-            Pins.append(specs.get('Pins', ''))
-        # if specs.get('Bus Type', '') not in Bus_Type:
-        #     Bus_Type.append(specs.get('Bus Type', ''))
-        if specs.get('Error Correction', '') not in Error_Correction:
-            Error_Correction.append(specs.get('Error Correction', ''))
-        if specs.get('Cycle Time', '') not in Cycle_Time:
-            Cycle_Time.append(specs.get('Cycle Time', ''))
-        if specs.get('Cas', '') not in Cas:
-            Cas.append(specs.get('Cas', ''))
-        if specs.get('Rank', '') not in Rank:
-            Rank.append(specs.get('Rank', ''))
-        if specs.get('Voltage', '') not in Voltage:
-            Voltage.append(specs.get('Voltage', ''))
+        if row['hard_drive_interface'] not in hard_drive_interface:
+            hard_drive_interface.append(row['hard_drive_interface'])
+        if row['hard_drive_speed'] not in hard_drive_speed:
+            hard_drive_speed.append(row['hard_drive_speed'])
+        if row['hard_drive_form_factor'] not in hard_drive_form_factor:
+            hard_drive_form_factor.append(row['hard_drive_form_factor'])
+        if row['hard_drive_cache'] not in hard_drive_cache:
+            hard_drive_cache.append(row['hard_drive_cache'])
+
+        
+        
+        if row['hard_drive_capacity'] not in Capacity:
+            Capacity[row['hard_drive_capacity']]=1
+        else:
+            Capacity[row['hard_drive_capacity']]+=1
+            # Capacity.append(row['hard_drive_capacity'])
+        
 
         if row in processed_rows:
             print(f"Duplicate row found: {row['mpn']}")
@@ -158,17 +177,23 @@ def process_json_to_csv(input_file, output_file):
         writer.writeheader()
         writer.writerows(processed_rows)
 
-    print(f"Brands : {brands}")
-    print(f"hard_drive Type : {hard_drive_type}")
+    keys_to_remove = [key for key, value in Capacity.items() if value < 5]
+    for key in keys_to_remove:
+        Capacity.pop(key)
+    sorted_capacity = dict(sorted(Capacity.items(), key=lambda item: item[1], reverse=True))
     print(f"Capacity : {Capacity}")
-    print(f"Data Transfer Rate : {Data_Transfer_Rate}")
-    print(f"Pins : {Pins}")
-    print(f"Bus Type : {Bus_Type}")
-    print(f"Error Correction : {Error_Correction}")
-    print(f"Cycle Time : {Cycle_Time}")
-    print(f"Cas : {Cas}")
-    print(f"Rank : {Rank}")
-    print(f"Voltage : {Voltage}")
+
+    print(f"Brands : {brands}")
+    print(f"Capacity : {sorted_capacity}")
+    print(f"Hard Drive Interface : {hard_drive_interface}")
+    print(f"Hard Drive Speed : {hard_drive_speed}")
+    print(f"Hard Drive Form Factor : {hard_drive_form_factor}")
+    print(f"Hard Drive Cache : {hard_drive_cache}")
+
+
+
+
+
     print(f"Total Products : {len(processed_rows)}")
 
 

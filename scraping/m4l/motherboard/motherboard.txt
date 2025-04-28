@@ -1,0 +1,36 @@
+Total Products : 10796
+Brands : ['AMD', 'ASUS', '', 'ASRock', 'Dell', 'EVGA', 'Gigabyte Tech', 'HP', 'IBM', 'Intel', 'Lenovo', 'MSI', 
+'SuperMicro', 'Tyan', 'Biostar', 'ECS Elite', 'Foxconn', 'Acer', 'Sapphire', 'Zotac', 'Fujitsu', 'Elite Screens',
+ 'Advantech', 'Toshiba', 'Compaq', 'Gateway', 'Sun', 'Samsung', 'Sony', 'Minuteman', 'NEC', 'EMC', 'First Computer', 
+ 'Abit', 'Antec', 'Jetway', 'VIA Tech', 'BCM Advanced Research']
+
+
+Chipset : ['', 'AMD 8111', 'AMD 770', 'AMD A58', 'NVIDIA nForce Professional 2200', 'Intel P55 Express', 
+'Intel HM55 Express', 'NVIDIA nForce 750i SLI', 'AMD 780V', 'Intel X58 Express', 'Intel G41 Express', 'Intel 865PE',
+ 'VIA Pro133A', 'Intel H55 Express', 'Intel Q43 Express', 'VIA KX133', 'Intel P67 Express', 'VIA P4M900', 'AMD 790GX', 
+ 'NVIDIA nForce 780a', 'NVIDIA nForce4 SLI', 'VIA P4M890', 'AMD 790FX', 'Intel G31 Express', 'VIA K8M890', 
+ 'Intel NM10 Express', 'Intel B43 Express', 'Intel P45 Express', 'NVIDIA nForce 790i SLI', 'Intel 945G Express', 
+ 'AMD 790X', 'NVIDIA nForce 780i SLI', 'Intel PM45 Express', 'NVIDIA nForce 630a', 'Intel G43 Express', 'AMD 785G', 
+ 'NVIDIA nForce 650i SLI', 'Intel X79 Express', 'AMD A85X', 'NVIDIA MCP7A-ION', 'NVIDIA nForce 430', 'AMD 990FX', 
+ 'Intel X99', 'Intel Z87', 'Intel H67 Express', 'Intel C224', 'AMD A75', 'Intel 945GC Express', 'Intel H77 Express', 'Intel Z68 Express', 'AMD A55', 'Intel H61 Express', 'Intel B75 Express', 'Intel Z77 Express', 'Intel H81', 'Intel 865G', 'AMD 970', 'Intel Z97', 'Intel B85', 'Intel HM87', 'AMD 870', 'AMD 760G', 'AMD A88X', 'AMD 890FX', 'AMD 780G', 'Intel Z270', 'AMD 880G', 'VIA KT880', 'Intel H97', 'AMD 890GX', 'Intel Z75 Express', 'System on Chip (SoC)', 'Intel P43 Express', 'Intel C226', 'Intel H87', 'Intel 925XE Express', 'Intel E7520', 'Intel 875P', 'Intel E7230', 'Intel 845PE', 'Intel 845MP', 'Intel E7221', 'Intel Q965 Express', 'Intel 925X Express', 'Intel 855PM', 'Intel 915GV Express', 'Intel E7501', 'Intel 945P Express', 'Intel 915 Express', 'Intel 5000X', 
+'Intel X299', 'NVIDIA nForce 730i', 'Intel Z170', 'Intel C604', 'NVIDIA nForce 520 LE', 'NVIDIA nForce2 400', 
+'Intel C222', 'Intel C202', 'Intel Q57 Express', 'VIA Pro133', 'VIA KM400A', 'Intel 945GM Express', 'Intel 915G Express', 'Intel 855GM', 'Intel G33 Express', 'Intel 848P', 'Intel 915GM Express', 'Intel 
+GM45 Express', 'Intel 440BX', 'Intel E7205', 'Intel 810E', 'Intel 820', 'Intel 865GV', 'Intel 815EP', 'Intel 845G', 
+'ATI Radeon Xpress 200', 'Intel 815E', 'Intel Q35 Express', 'Intel 845', 'Intel 845GE', 'Intel 850E', 'Intel P35 Express', 'Intel 955X Express', 'Intel 5000P', 'Intel E7210', 'Intel 850', 'Intel 440FX', 'Intel G965 Express', 'Intel 815EG', 'Intel 975X Express', 'VIA K8M800', 'Intel Q77 Express', 'NVIDIA nForce 405', 'VIA P4M800', 'Intel H57 Express', 'NVIDIA nForce 980a', 'Intel C602', 'Intel C606', 'Intel C612', 'AMD SR5670 + SP5100', 'Intel C602J', 'Intel 5500', 'Intel Q87', 'Intel 3210', 'Intel E7500', 'Intel 5520', 'Intel C204', 'Intel E7320', 'nVidia MCP55-V Pro', 'Intel 3010', 'Intel 3420', 'Intel 3200', 'nVidia MCP55 Pro', 'Intel 5400', 'NVIDIA nForce Professional 3600', 'Intel Q67 Express', 'AMD 760', 'AMD B350', 'AMD X370', 'AMD X570', 'AMD B450', 'AMD A520', 'AMD A320', 'AMD X470', 'AMD 990X', 'NVIDIA nForce 750a', 'AMD A68H FCH', 'AMD A78', 'Intel C422', 'Intel C236', 'Intel B250', 'Intel H110', 'Intel C232', 'Intel B150', 'Intel Q170', 'Intel H170', 
+'Intel H270', 'Intel Q963 Express', 'Intel 3000', 'Intel G45 Express', 'Intel X48 Express', 'Intel P965 Express', 
+'Intel Z370', 'Intel Q45 Express', 'Intel 845GV', 'Serverworks GC-LE', 'Intel 860', 'Intel E7525', 'Intel C206',
+'Intel E7505', 'Intel PM965 Express', 'AMD M780G', 'Intel 5000V', 'Intel 440GX', 'ServerWorks ServerSet III LE', 
+'SiS 651 (IGP)', 'Intel 845GL', 'AMD A50M', 'Intel QM77 Express', 'Intel HM70 Express', 'NVIDIA nForce 630i', 
+'Intel QM67 Express', 'VIA CN896', 'Intel 945GME Express', 'Intel B360']
+
+CPU Socket Type : ['', 'Socket FM2+', 'Socket 940', 'LGA 775', 'Socket 7', 'Socket AM3', 'Socket F (1207)', 'LGA 1156',
+'LGA 1366', 'Socket 370', 'Socket AM2+', 'Socket AM2Socket AM2+', 'Slot 1', 'LGA 1155', 'Socket AM2', 'PGA604', 
+'Socket 939', 'Socket 478', 'Socket 754', 'FCBGA 559', 'Socket F', 'PGA478', 'LGA775', 'LGA 2011', 'Socket FM2', 
+'BGA437', 'Socket AM3+', 'LGA 2011-3', 'LGA 1150', 'Socket FM1', 'Socket AM3/AM3+', 'Socket A', 'Slot A', 
+'Socket AM1', 'LGA 1151', 'Socket 989', 'BGA603', 'LGA 771', 'LGA 2066', 'LGA 3647', 'Socket P', '478 pin', 'BGA479', 
+'Socket FM2/FM2+', 'System on Chip (SoC)', 'Socket C32', 'LGA 1356', 'FCBGA 1170', 'Socket G34', 'Socket 479', 
+'PGA370', 'FC-PGA', 'Socket AM4', 'LGA 1200', 'PAC418', 'Socket 423', 'Socket S1', 'LGA1366', 'FCBGA 1283', 
+'FCBGA 1667', 'BGA', 'FCBGA 1023', 'Socket G2 (rPGA 988B)']
+
+Form Factor : ['ATX', 'Micro ATX', 'SSI EEB', '', 'Mini-ITX', 'Ultra ATX', 'E-ATX', 'EATX', 'SSI CEB', 'Micro BTX', 
+'Proprietary WIO', 'Proprietary', 'Flex ATX', 'SWTX', 'Enhanced Extended ATX', 'AT', 'SSI MEB', 'BTX', 'Mini-STX']

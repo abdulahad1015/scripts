@@ -1,21 +1,41 @@
-from selenium import webdriver
+import requests
 
-# Initialize WebDriver (Ensure you have the correct WebDriver for your browser)
-driver = webdriver.Chrome()  
+# Replace with your real credentials and item ID
+EBAY_API_ENDPOINT = "https://api.ebay.com/ws/api.dll"
+EBAY_APP_ID = "AbdulAha-AbdulTes-PRD-f68cae849-84f8da57"
+EBAY_DEV_ID = "2cf8d20b-824f-44fc-9968-76b113af2082"
+EBAY_CERT_ID = "PRD-68cae8493fb1-a76e-4550-b293-93a7"
+EBAY_USER_TOKEN = "v^1.1#i^1#f^0#I^3#r^1#p^3#t^Ul4xMF8xOkRCQUQ1RjBBNUI1RTg4MkE4QTNDRDFERTBCMjNGNjgwXzFfMSNFXjI2MA=="
+ITEM_ID = "311841532586"  # Replace with actual item ID
 
-with open("ebay.csv" , "r") as file:
-    urls = file.readlines()
+headers = {
+    "X-EBAY-API-CALL-NAME": "GetItem",
+    "X-EBAY-API-SITEID": "0",
+    "X-EBAY-API-COMPATIBILITY-LEVEL": "967",
+    "X-EBAY-API-DEV-NAME": EBAY_DEV_ID,
+    "X-EBAY-API-APP-NAME": EBAY_APP_ID,
+    "X-EBAY-API-CERT-NAME": EBAY_CERT_ID,
+    "Content-Type": "json"
+}
 
+body = f"""<?xml version="1.0" encoding="utf-8"?>
+<GetItemRequest xmlns="urn:ebay:apis:eBLBaseComponents">
+  <RequesterCredentials>
+    <eBayAuthToken>{EBAY_USER_TOKEN}</eBayAuthToken>
+  </RequesterCredentials>
+  <ItemID>{ITEM_ID}</ItemID>
+  <IncludeItemSpecifics>true</IncludeItemSpecifics>
+  <DetailLevel>ReturnAll</DetailLevel>
+</GetItemRequest>
+"""
 
+response = requests.post(EBAY_API_ENDPOINT, headers=headers, data=body)
 
-for url in urls:
-    url = url.split(",")[1]
-    driver.get(url)
-    final_url = driver.current_url  
-    if url != final_url:
-        print(f"Redirect detected! Final URL:{url} - {final_url}")
-    else:
-        print("No redirection detected.")
-
-# Close the browser
-driver.quit()
+if response.status_code == 200:
+    with open("item_details.json", "w", encoding="utf-8") as f:
+        f.write(response.text)
+        print(response.json)
+    print("✅ Item details saved to 'item_details.xml'")
+else:
+    print("❌ API call failed:", response.status_code)
+    print(response.text)
