@@ -1,0 +1,164 @@
+{
+  "a.pdf": {
+    "raw_text": "Abdul Ahad Danish\n+92 335 2662745 abdulahad1015@gmail.com linkedin.com/in/abdul-ahad-danish github.com/abdulahad1015\nEducation\nFAST-NUCES, Karachi 2022 – 2026\nBS in Computer Science\nTechnical Skills\nLanguages: Python C++\nWeb/Backend: Flask REST APIs, Jinja2\nFrontend: HTML5, CSS Bootstrap, JavaScript\nDatabase: MySQL SQLAlchemy\nDevOps/Cloud: Docker, GitHub Actions AWS EC2, AWS RDS, CI/CD\nTools: Git, Linux Unit Testing, Selenium\nExperience\nModule Head - CodeSprint, PROCOM’25 Aug 2024 – Feb 2025\n•Organized and led CodeSprint competitive programming contest\n•Designed technical modules and problems for event rounds\n•Collaborated with sponsors and tech teams for smooth execution\nProduct Development Intern, Osaka Motors JP (On-site) Jan 2025 – Apr 2025\n•Built and deployed web scraping scripts for product data automation\n•Improved workflow for data collection using Python and Selenium\n•Assisted in CRM research and documentation for new sales models\nHead of Finance, The Neem Tree (NUCES) Aug 2024 – May 2025\n•Managed budgeting and finances for society events and drives\n•Led fund-raising initiatives and collaborated with external sponsors\n•Ensured transparent and efficient financial operations\nProjects\nCI/CD Auto-Deployment Pipeline github.com/abdulahad1015/DB_PROJECT\n•Developed a full CI/CD pipeline using GitHub Actions for Flask + MySQL app on AWS EC2\n•Dockerized application, used Jinja2 for dynamic environment configs\nFactory Resource Management System github.com/abdulahad1015/DB_PROJECT\n•Client-driven web app with RBAC, CRUD ops for users, products, raw materials, and warehouses\n•Includes login/session auth, DevOps integration, and deployment via CI/CD\n•Tech: Flask, MySQL, Bootstrap5, GitHub Actions, Docker, AWS\nUniversity Timetable Generator github.com/abdulahad1015/DS_PROJECT\n•Created backtracking-based scheduling tool for conflict-free university timetables\n•Used hashmaps, STL vectors, queues, and arrays for optimized performance\nCertifications\n•100 Days of Python Bootcamp\n•Supervised Learning with scikit-learn\n•Unsupervised Learning in Python\nAchievements\n•Runner-up in CodersCup by ACM NUCES\n•Active participant in hackathons and university coding clubs",
+    "structured_data": {
+      "name": "Abdul Ahad Danish",
+      "email": "abdulahad1015@gmail.com",
+      "phone": "+92 335 2662745",
+      "education": [
+        {
+          "institution": "FAST-NUCES, Karachi",
+          "degree": "BS in Computer Science",
+          "date": "2022 – 2026"
+        }
+      ],
+      "experience": [
+        {
+          "company": "CodeSprint, PROCOM’25",
+          "position": "Module Head",
+          "date": "Aug 2024 – Feb 2025",
+          "description": "Organized and led CodeSprint competitive programming contest, designed technical modules and problems for event rounds, collaborated with sponsors and tech teams"
+        },
+        {
+          "company": "Osaka Motors JP (On-site)",
+          "position": "Product Development Intern",
+          "date": "Jan 2025 – Apr 2025",
+          "description": "Built and deployed web scraping scripts for product data automation, improved workflow for data collection using Python and Selenium"
+        },
+        {
+          "company": "The Neem Tree (NUCES)",
+          "position": "Head of Finance",
+          "date": "Aug 2024 – May 2025",
+          "description": "Managed budgeting and finances for society events and drives, led fund-raising initiatives and collaborated with external sponsors"
+        }
+      ],
+      "skills": [
+        {
+          "category": "Technical Skills",
+          "technologies": [
+            "Python",
+            "C++",
+            "Flask",
+            "REST APIs",
+            "Jinja2",
+            "HTML5",
+            "CSS Bootstrap",
+            "JavaScript",
+            "MySQL",
+            "SQLAlchemy",
+            "Docker",
+            "GitHub Actions",
+            "AWS EC2",
+            "AWS RDS",
+            "CI/CD",
+            "Git",
+            "Linux",
+            "Unit Testing",
+            "Selenium"
+          ]
+        },
+        {
+          "category": "DevOps/Cloud",
+          "technologies": [
+            "Docker",
+            "GitHub Actions",
+            "AWS EC2",
+            "AWS RDS",
+            "CI/CD"
+          ]
+        }
+      ],
+      "summary": null
+    },
+    "file_path": "CVs\\a.pdf"
+  },
+  "Ashar_Resume.pdf": {
+    "raw_text": "Muhammad Ashar Usmani\n♂phone+92 328 215 8013 /envel⌢peashar.usmani9@gmail.com /linkedinlinkedin.com/in/ashar-usmani /githubgithub.com/ashboy27\nEducation\nFAST NUCES August 2022 – Present\nBachelor of Science in Computer Science Karachi, Pakistan\nCambridge International A-Levels January 2021 – June 2022\nGrades: 3A* Karachi, Pakistan\nCambridge International O-Levels June 2019 – January 2021\nGrades: 5A*, 3A Karachi, Pakistan\nSignificant Achievements\n•Secured Top University Team Title - SOFTEC Competitive Programming, NUCES Lahore\n•Winner - Coders Cup, NUCES Karachi\n•Runners-up - Jinnah ProBattle Competitive Programming, MAJU Karachi\n•Regional Distinction - O-Levels\nExperience\nSiRiiL January 2025 – Present\nAssociate Software AI/ML Engineer Karachi, Pakistan\n•Developing a multi-agent AI system to automate database creation from financial data, replacing manual Excel\nprocesses, and enabling efficient document search for accountants across financial regulations and tax laws.\n•Building a stock analysis platform that integrates real-time market data, news, and technical indicators (RSI, MACD)\nwhile leveraging multi-agent systems for trading insights.\nCambridge Simplified January 2020 – August 2023\nFounder & Lead Instructor Remote\n•Founded and scaled an online education platform focused on O-Level and A-Level curriculum, tutoring 100+ students\nacross multiple subjects.\n•Managed and trained a team of 5+ tutors, implementing quality standards and performance tracking systems.\nProjects\nSocial Media Bot Detection |Python, Scikit-Learn, Seaborn November 2024\n•Implemented machine learning algorithms like KNN to detect and classify social media bots.\n•Developed graph-based features for bot detection using Python and Scikit-learn libraries.\n•Created visualizations using Seaborn to analyze and present classification results effectively.\nUniversity Student Portal |Flutter, Dart, SQLite December 2024\n•Developed a mobile application for managing academic tasks using Flutter and Dart.\n•Implemented SQLite database integration for efficient storage and retrieval of academic information.\n•Created intuitive UI for managing assignments, attendance tracking, and academic schedules.\nParallel Graph Searches |C++, OpenMP, MPI, SFML October 2024\n•Implemented parallel versions of graph traversal algorithms like A* search using OpenMP and MPI.\n•Utilized SFML to create visual representations of search algorithms in real-time.\nTechnical Skills\nLanguages : Python, C, C++, Dart, SQL\nDeveloper Tools : VS Code, Eclipse, Android Studio\nTechnologies/Frameworks : Linux, Docker, GitHub, CrewAI, LangChain, Scikit-Learn, TensorFlow\nCompetitive Programming : ICPC Regional Finals, Meta Hacker Cup\nExtracurricular\nProcom ’25 - Competitive Programming February 2025\nHead of Competitive Programming FAST NUCES\n•Led the Competitive Programming event, managing problem-setting and contest logistics.\n•Designed and reviewed algorithmic challenges, ensuring a balanced and competitive environment.\nThe Grand Debate November 2022\nHonorary Delegate FAST NUCES\n•Awarded the Honorary Delegate award for outstanding participation in TGD.\n•Engaged in high-level discussions and debates, demonstrating critical thinking and argumentation skills.",
+    "structured_data": {
+      "name": "Muhammad Ashar Usmani",
+      "email": "peashar.usmani9@gmail.com",
+      "phone": "+92 328 215 8013",
+      "education": [
+        {
+          "school": "FAST NUCES",
+          "location": "Karachi, Pakistan",
+          "degree": "Bachelor of Science in Computer Science",
+          "start_date": "August 2022",
+          "end_date": "Present"
+        },
+        {
+          "school": "Cambridge International School",
+          "location": "Karachi, Pakistan",
+          "degree": "A-Levels",
+          "start_date": "January 2021",
+          "end_date": "June 2022",
+          "grades": "3A*"
+        },
+        {
+          "school": "Cambridge International School",
+          "location": "Karachi, Pakistan",
+          "degree": "O-Levels",
+          "start_date": "June 2019",
+          "end_date": "January 2021",
+          "grades": "5A*, 3A"
+        }
+      ],
+      "experience": [
+        {
+          "company": "SiRiiL",
+          "location": "Karachi, Pakistan",
+          "job_title": "Associate Software AI/ML Engineer",
+          "start_date": "January 2025",
+          "end_date": "Present"
+        },
+        {
+          "company": "Cambridge Simplified",
+          "location": "Remote",
+          "job_title": "Founder & Lead Instructor",
+          "start_date": "January 2020",
+          "end_date": "August 2023"
+        }
+      ],
+      "skills": [
+        {
+          "category": "Programming Languages",
+          "techs": [
+            "Python",
+            "C",
+            "C++",
+            "Dart",
+            "SQL"
+          ]
+        },
+        {
+          "category": "Developer Tools",
+          "techs": [
+            "VS Code",
+            "Eclipse",
+            "Android Studio"
+          ]
+        },
+        {
+          "category": "Technologies/Frameworks",
+          "techs": [
+            "Linux",
+            "Docker",
+            "GitHub",
+            "LangChain",
+            "Scikit-Learn",
+            "TensorFlow"
+          ]
+        },
+        {
+          "category": "Competitive Programming",
+          "events": [
+            "ICPC Regional Finals",
+            "Meta Hacker Cup"
+          ]
+        }
+      ],
+      "summary": ""
+    },
+    "file_path": "CVs\\Ashar_Resume.pdf"
+  }
+}
